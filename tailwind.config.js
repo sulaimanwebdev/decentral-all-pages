@@ -29,13 +29,18 @@ module.exports = {
           dark:"#979797",
         },
 
-
-        fontSize: {
-          'tiny': '16px',
-        },
-
+     
       },
       screens: {
+        'xsL': '0px',
+        'smL': '640px',
+        'mdL': '786px',
+        'lgL': '1024px',
+        'xlL': '1280px',
+        '2xlL': '1536px',
+
+
+
         'sm11': '689px',
         'sm10': '600px',
         'sm9': '450px',
@@ -54,7 +59,22 @@ module.exports = {
         'xl3': '1700px',
         'lg3': '1264px',
 
-      }
+      },
+
+      fontSize: {
+        'xsLa': '12px',
+        'smLa': '14px',
+        'tiny': '16px',
+        'baseLa': '20px',
+        'lgLa':   '28px',
+        'xlLa': '32px',
+        '2xlLa': '40px',
+        '3xlLa': '54px',
+        '4xlLa': '56px',
+      },
+
+
+
     },
   },
   plugins: [],

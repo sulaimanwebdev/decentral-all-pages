@@ -7,15 +7,15 @@ import Picture from "../../assets/images/Picture Container.png";
 export default function Instantly() {
   return (
     <>
-      <div className="w-11/12 lg:w-10/12  2xl:w-8/12  ml-auto mr-auto">
+      <div className="w-11/12 lgL:w-10/12 2xlL:w-8/12  ml-auto mr-auto">
         <div class="grid grid-cols-12 gap-4     ">
-          <div class=" col-span-12 lg:col-span-6  relative  text-center lg:text-left ">
-            <h1 className=" text-2xl sm:text-3xl f-f-sm text-black mt-10 ">
+          <div class=" col-span-12 lgL:col-span-6  relative  text-center lgL:text-left ">
+            <h1 className=" text-2xlLa smL:text-3xlLa f-f-sm text-black mt-10 ">
               Instantly buy and sell crypto on our platform!
             </h1>
             <button
               type="button"
-              className="text-primary bg-primary-light mt-2 focus:ring-4 focus:outline-none  rounded-3xl text-xs md:text-sm px-6 py-2 text-center f-f-b mr-3 md:mr-0 "
+              className="text-primary bg-primary-light mt-2 focus:ring-4 focus:outline-none  rounded-3xl text-xsLa mdL:text-smLa px-6 py-2 text-center f-f-b mr-3 mdL:mr-0 "
             >
               NO MORE WAITING! 🔥
             </button>
@@ -27,7 +27,7 @@ export default function Instantly() {
 
             <button
               type="button"
-              className="text-white bg-primary  focus:ring-4 focus:outline-none  rounded-3xl text-xs md:text-sm px-6 py-3 text-center f-f-sm mr-3 md:mr-0 "
+              className="text-white bg-primary  focus:ring-4 focus:outline-none  rounded-3xl text-xsLa mdL:text-smLa px-6 py-3 text-center f-f-sm mr-3 mdL:mr-0 "
             >
               <ul className="inline-flex">
                 <li>Get started</li>
@@ -44,22 +44,22 @@ export default function Instantly() {
               </ul>
             </button>
 
-            <div class="grid grid-cols-12 gap-4  my-4  text-center lg:text-left  ">
-              <div class=" col-span-12  lg:col-span-5 lg:border-r lg:border-grey-dark ">
+            <div class="grid grid-cols-12 gap-4  my-4  text-center lgL:text-left  ">
+              <div class=" col-span-12  lgL:col-span-5 lgL:border-r lgL:border-grey-dark ">
                 <ul className="inline-flex">
-                  <li className="text-black f-f-b text-2xl ">4624</li>
+                  <li className="text-black f-f-b text-2xlLa ">4624</li>
                   <li className="ml-4 mt-4">
-                    <h2 className="text-black f-f-r text-sm ">
+                    <h2 className="text-black f-f-r text-smLa ">
                       Customer Served{" "}
                     </h2>
                   </li>
                 </ul>
               </div>
-              <div class=" col-span-12  lg:col-span-4">
+              <div class=" col-span-12  lgL:col-span-4">
                 <ul className="inline-flex">
-                  <li className="text-black f-f-b text-2xl ">$239K</li>
+                  <li className="text-black f-f-b text-2xlLa ">$239K</li>
                   <li className="ml-4 mt-4">
-                    <h2 className="text-black f-f-r text-sm ">
+                    <h2 className="text-black f-f-r text-smLa ">
                       Transaction Till Now{" "}
                     </h2>
                   </li>
@@ -67,9 +67,9 @@ export default function Instantly() {
               </div>
             </div>
             {/* renu section started */}
-            <div className="  lg:absolute lg:bottom-3 lg:left-full w-full ">
+            <div className="  lgL:absolute lgL:bottom-3 lgL:left-full w-full ">
               <div class="grid grid-cols-12 gap-4  my-4   ">
-                <div class=" col-start-3 col-end-11 sm:col-start-3 sm:col-end-10  lg:col-span-4 ">
+                <div class=" col-start-3 col-end-11 smL:col-start-3 smL:col-end-10  lgL:col-span-4 ">
                   <div className=" bg-white p-4  shadow-lg ">
                     <ul className="inline-flex">
                       <li>
@@ -86,7 +86,7 @@ export default function Instantly() {
                         <ul className="inline-flex">
                           <li>
                             {" "}
-                            <h2 className="text-primary f-f-b text-xs  ">
+                            <h2 className="text-primary f-f-b text-xsLa  ">
                               +48.50%{" "}
                             </h2>
                           </li>
@@ -104,8 +104,8 @@ export default function Instantly() {
                         </ul>
                       </li>
                     </ul>
-                    <h2 className=" text-lg f-f-b text-black ">$36,845</h2>
-                    <h2 className=" text-grey text-sm f-f-r  ">
+                    <h2 className="text-lgLa f-f-b text-black ">$36,845</h2>
+                    <h2 className="text-grey text-smLa f-f-r  ">
                       Total Revenue
                     </h2>
                   </div>
@@ -114,7 +114,7 @@ export default function Instantly() {
             </div>
             {/* renu section ended */}
           </div>
-          <div class=" col-span-12 lg:col-span-6">
+          <div class=" col-span-12 lgL:col-span-6">
             <img
               src={Picture}
               width="445px"

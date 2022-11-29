@@ -50,7 +50,7 @@ export default function Heroslick() {
                 <img src={Btoken} height="20px" width="20px" />
               </li>
               <li>
-                <h1 className=" f-f-r text-grey text-xs sm:text-sm ml-2">
+                <h1 className=" f-f-r text-grey text-xsLa smL:text-smLa ml-2">
                   btc $0.999962
                 </h1>
               </li>
@@ -62,7 +62,7 @@ export default function Heroslick() {
                 <img src={bpt} height="20px" width="20px" />
               </li>
               <li>
-                <h1 className=" f-f-r text-grey text-xs sm:text-sm ml-2">
+                <h1 className=" f-f-r text-grey text-xsLa smL:text-smLa ml-2">
                   bpt $0.999962
                 </h1>
               </li>
@@ -74,7 +74,7 @@ export default function Heroslick() {
                 <img src={ban} height="20px" width="20px" />
               </li>
               <li>
-                <h1 className=" f-f-r text-grey text-xs sm:text-sm ml-2">
+                <h1 className=" f-f-r text-grey text-xsLa smL:text-smLa ml-2">
                   bancor $0.999962
                 </h1>
               </li>
@@ -86,7 +86,7 @@ export default function Heroslick() {
                 <img src={dai} height="20px" width="20px" />
               </li>
               <li>
-                <h1 className=" f-f-r text-grey text-xs sm:text-sm ml-2">
+                <h1 className=" f-f-r text-grey text-xsLa smL:text-smLa ml-2">
                   dai $0.999962
                 </h1>
               </li>
@@ -98,7 +98,7 @@ export default function Heroslick() {
                 <img src={eth} height="20px" width="20px" />
               </li>
               <li>
-                <h1 className=" f-f-r text-grey text-xs sm:text-sm ml-2">
+                <h1 className=" f-f-r text-grey text-xsLa smL:text-smLa ml-2">
                   eth $0.999962
                 </h1>
               </li>
@@ -110,7 +110,7 @@ export default function Heroslick() {
                 <img src={link} height="20px" width="20px" />
               </li>
               <li>
-                <h1 className=" f-f-r text-grey text-xs sm:text-sm ml-2">
+                <h1 className=" f-f-r text-grey text-xsLa smL:text-smLa ml-2">
                   link $0.999962
                 </h1>
               </li>
@@ -122,7 +122,7 @@ export default function Heroslick() {
                 <img src={dop} height="20px" width="20px" />
               </li>
               <li>
-                <h1 className=" f-f-r text-grey text-xs sm:text-sm ml-2">
+                <h1 className=" f-f-r text-grey text-xsLa smL:text-smLa ml-2">
                   dop $0.999962
                 </h1>
               </li>
@@ -134,7 +134,7 @@ export default function Heroslick() {
                 <img src={bnb} height="20px" width="20px" />
               </li>
               <li>
-                <h1 className=" f-f-r text-grey text-xs sm:text-sm ml-2">
+                <h1 className=" f-f-r text-grey text-xsLa smL:text-smLa ml-2">
                   bnb $0.999962
                 </h1>
               </li>
@@ -146,7 +146,7 @@ export default function Heroslick() {
                 <img src={ban} height="20px" width="20px" />
               </li>
               <li>
-                <h1 className=" f-f-r text-grey text-xs sm:text-sm ml-2">
+                <h1 className=" f-f-r text-grey text-xsLa smL:text-smLa ml-2">
                   bancor $0.999962
                 </h1>
               </li>

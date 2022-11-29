@@ -8,9 +8,9 @@ import Arrow from "../../assets/images/Arrow.svg";
 export default function Sendcrypto() {
   return (
     <div className="bg-white py-6   ">
-      <div className="w-11/12 lg:w-10/12  2xl:w-8/12 ml-auto mr-auto">
+      <div className="w-11/12 lgL:w-10/12 2xlL:w-8/12 ml-auto mr-auto">
         <div class="grid grid-cols-12 gap-4     ">
-          <div class=" col-span-12 lg:col-span-6  lg:hidden ">
+          <div class=" col-span-12 lgL:col-span-6  lgL:hidden ">
             <img
               src={sendcrypto}
               height="432px"
@@ -18,9 +18,9 @@ export default function Sendcrypto() {
               className=" ml-auto mr-auto"
             />
           </div>
-          <div class=" col-span-12 lg:col-span-6 text-center lg:text-left  ">
+          <div class=" col-span-12 lgL:col-span-6 text-center lgL:text-left  ">
             <div className="relative">
-              <h1 className="text-black text-xl sm:text-4xl f-f-b   ">
+              <h1 className="text-black text-xlLa smL:text-4xlLa f-f-b   ">
                 Send crypto to friends and family with just a{" "}
                 <span className="text-primary cursor-pointer click-img ">
                   click!{" "}
@@ -29,7 +29,7 @@ export default function Sendcrypto() {
             </div>
             <button
               type="button"
-              className="text-white bg-primary  focus:ring-4 focus:outline-none  rounded-3xl text-xs md:text-sm px-6 py-3 text-center f-f-sm  mt-3 md:mr-0 "
+              className="text-white bg-primary  focus:ring-4 focus:outline-none  rounded-3xl text-xsLa mdL:text-smLa px-6 py-3 text-center f-f-sm  mt-3 mdL:mr-0 "
             >
               <ul className="inline-flex">
                 <li>Get started</li>
@@ -46,7 +46,7 @@ export default function Sendcrypto() {
               </ul>
             </button>
           </div>
-          <div class=" col-span-12 lg:col-span-6 hidden lg:block  ">
+          <div class=" col-span-12 lgL:col-span-6 hidden lgL:block  ">
             <img
               src={sendcrypto}
               height="432px"
@@ -54,7 +54,7 @@ export default function Sendcrypto() {
               className=" ml-auto mr-auto"
             />
           </div>
-          <div class=" col-span-12 lg:col-span-6   ">
+          <div class=" col-span-12 lgL:col-span-6   ">
             <img
               src={dealsgraphic}
               height="432px"
@@ -62,8 +62,8 @@ export default function Sendcrypto() {
               className=" ml-auto mr-auto"
             />
           </div>
-          <div class=" col-span-12 lg:col-span-6  text-center lg:text-left ">
-            <h1 className="text-black text-lg sm:text-2xl f-f-b  ">
+          <div class=" col-span-12 lgL:col-span-6  text-center lgL:text-left ">
+            <h1 className="text-black text-lgLa smL:text-2xlLa f-f-b  ">
               Connect and chat with friends and family
             </h1>
             <h2 class="text-tiny text-grey f-f-r ">
@@ -72,7 +72,7 @@ export default function Sendcrypto() {
             </h2>
             <button
               type="button"
-              className="text-primary border border-primary  focus:ring-4 focus:outline-none  rounded-3xl text-xs md:text-sm px-6 py-3 text-center f-f-sm  mt-3 md:mr-0 "
+              className="text-primary border border-primary  focus:ring-4 focus:outline-none  rounded-3xl text-xsLa mdL:text-smLa px-6 py-3 text-center f-f-sm  mt-3 mdL:mr-0 "
             >
               <ul className="inline-flex">
                 <li>Connect</li>

@@ -31,11 +31,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: PlusJakartaSans-Medium, sans-serif;
   
 }
 
 .dashboard{
+  font-family: PlusJakartaSans-Medium, sans-serif;
   overflow-y: hidden;
   overflow-x:hidden;
 }
@@ -132,18 +132,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (min-width: 1280px) {
   .container {
     max-width: 1110px;
@@ -167,4 +155,20 @@ left: 29px;
  
     }
 
+}
+
+.f-f-b{
+  font-family:PlusJakartaSans-Bold;
+}
+.f-f-li{
+  font-family:PlusJakartaSans-Light;
+}
+.f-f-m{
+  font-family:PlusJakartaSans-Medium;
+}
+.f-f-r{
+  font-family:PlusJakartaSans-Regular;
+}
+.f-f-sm{
+  font-family:PlusJakartaSans-SemiBold;
 }

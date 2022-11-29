@@ -43,8 +43,8 @@ export default function Suppported() {
 
   return (
     <div className="bg-grey-light py-6 ">
-      <div className="w-11/12 lg:w-10/12  2xl:w-8/12  ml-auto mr-auto">
-        <h1 className=" text-black text-center text-lg sm:text-xl f-f-b ">
+      <div className="w-11/12 lgL:w-10/12 2xlL:w-8/12  ml-auto mr-auto">
+        <h1 className=" text-black text-center text-lgLa smL:text-xlLa f-f-b ">
           Suppported Currency
         </h1>
 
