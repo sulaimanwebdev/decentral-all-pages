@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/images/Logo.png";
 import arrowright from "../../assets/images/arrow-right.png";
 
@@ -12,10 +13,10 @@ export default function ButtonAppBar() {
           className=" w-11/12 lgL:w-10/12 2xlL:w-8/12 ml-auto mr-auto  flex flex-wrap justify-between items-center mx-auto"
           bis_skin_checked="1"
         >
-          <a href="" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={Logo} className="mr-3 h-6 smL:h-9" alt="Flowbite Logo" />
             {/* <span className="self-center text-xlLa font-semibold whitespace-nowrap dark:text-white">Flowbite</span> */}
-          </a>
+          </Link>
           <div className="flex mdL:order-2" bis_skin_checked="1">
             <button
               type="button"
@@ -71,53 +72,53 @@ export default function ButtonAppBar() {
           >
             <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 mdL:flex-row mdL:space-x-3 xlL:space-x-8 mdL:mt-0 mdL:text-smLa mdL:font-medium mdL:border-0 mdL:bg-white dark:bg-gray-800 mdL:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="block py-2 pr-4 pl-3 text-white f-f-b bg-primary rounded mdL:bg-transparent mdL:text-black mdL:p-0 dark:text-white"
                   aria-current="page"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="ml-0 mt-2 mdL:mt-0">
-                <a
-                  href="#"
+                <Link
+                  to="/portfolio"
                   className="block py-2 pr-4 pl-3 text-grey    f-f-r text-smLa  rounded hover:text-white  hover:bg-primary mdL:hover:bg-transparent mdL:hover:text-blue-700 mdL:p-0 "
                 >
                   Wallet
-                </a>
+                </Link>
               </li>
               <li className="ml-0 mt-2 mdL:mt-0">
-                <a
-                  href="#"
+                <Link
+                  to="/buy-sell"
                   className="block py-2 pr-4 pl-3 text-grey    f-f-r text-smLa  rounded hover:text-white  hover:bg-primary mdL:hover:bg-transparent mdL:hover:text-blue-700 mdL:p-0 "
                 >
                   Buy
-                </a>
+                </Link>
               </li>
               <li className="ml-0 mt-2 mdL:mt-0">
-                <a
-                  href="#"
+                <Link
+                  to="/buy-sell"
                   className="block py-2 pr-4 pl-3 text-grey    f-f-r text-smLa  rounded hover:text-white  hover:bg-primary mdL:hover:bg-transparent mdL:hover:text-blue-700 mdL:p-0 "
                 >
                   Sell
-                </a>
+                </Link>
               </li>
               <li className="ml-0 mt-2 mdL:mt-0">
-                <a
-                  href="#"
+                <Link
+                  to="/buy-sell"
                   className="block py-2 pr-4 pl-3 text-grey    f-f-r text-smLa  rounded hover:text-white  hover:bg-primary mdL:hover:bg-transparent mdL:hover:text-blue-700 mdL:p-0 "
                 >
                   Send
-                </a>
+                </Link>
               </li>
               <li className="ml-0 mt-2 mdL:mt-0">
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="block py-2 pr-4 pl-3 text-grey    f-f-r text-smLa  rounded hover:text-white  hover:bg-primary mdL:hover:bg-transparent mdL:hover:text-blue-700 mdL:p-0 "
                 >
                   Learn
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
