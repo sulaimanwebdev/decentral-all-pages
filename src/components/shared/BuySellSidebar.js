@@ -177,7 +177,6 @@ const BuySellSidebar = () => {
     function closeModal() {
         setIsOpen(false);
         setIsOpen2(false);
-
       }
     
       function openModal() {
