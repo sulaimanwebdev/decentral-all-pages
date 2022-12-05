@@ -48,8 +48,7 @@ const Settings = () => {
       <div className="px-5 w-full pt-4 flex gap-1 lg2:hidden items-center justify-between">
        <div className="h-fit"><Link to="/"><img src="/images/logo.svg" alt="logo" /></Link></div>
             <div className="flex items-center gap-2">
-            
-            <button onClick={()=> {navBar === "-translate-x-full" ? setnavBar('translate-x-0') : setnavBar('-translate-x-full')}} className='z-[999999] bg-white w-[45px] flex items-center justify-center h-[54px] rounded-xl border border-[#F2F2F2]'>{navBar === "-translate-x-full" ? <img src="/images/menu.svg" className='w-[25px]' alt="icon" /> : <img src="/images/close.svg" alt="icon" />}</button>
+            <button onClick={()=> {navBar === "-translate-x-full" ? setnavBar('translate-x-0') : setnavBar('-translate-x-full')}} className='z-[999999] bg-white w-[45px] flex items-center justify-center h-[54px] rounded-xl border border-[#F2F2F2]'> <img src="/images/menu.svg" className={`w-[25px] ${navBar === "-translate-x-full" ? "" : "hidden"}`} alt="icon" /> <img src="/images/close.svg" className={`w-[25px] ${navBar === "-translate-x-full" ? "hidden" : ""}`}  alt="icon" /></button>
             </div>
       </div>
       <div className={`${navBar} lg2:translate-x-0 transition fixed z-[9999] pr-[75px] lg2:pr-0 max-w-[300px] lg2:max-w-[100%] w-full top-0 left-0 lg2:relative lg2:top-auto lg2:left-auto`}><SideNavbar/></div>

@@ -102,7 +102,8 @@ const Friends = () => {
        <div className="h-fit"><Link to="/"><img src="/images/logo.svg" alt="logo" /></Link></div>
             <div className="flex items-center gap-2">
             
-            <button onClick={()=> {navBar === "-translate-x-full" ? setnavBar('translate-x-0') : setnavBar('-translate-x-full')}} className='z-[999999] bg-white w-[45px] flex items-center justify-center h-[54px] rounded-xl border border-[#F2F2F2]'>{navBar === "-translate-x-full" ? <img src="/images/menu.svg" className='w-[25px]' alt="icon" /> : <img src="/images/close.svg" alt="icon" />}</button>
+            <button onClick={()=> {navBar === "-translate-x-full" ? setnavBar('translate-x-0') : setnavBar('-translate-x-full')}} className='z-[999999] bg-white w-[45px] flex items-center justify-center h-[54px] rounded-xl border border-[#F2F2F2]'> <img src="/images/menu.svg" className={`w-[25px] ${navBar === "-translate-x-full" ? "" : "hidden"}`} alt="icon" /> <img src="/images/close.svg" className={`w-[25px] ${navBar === "-translate-x-full" ? "hidden" : ""}`}  alt="icon" /></button>
+
             </div>
       </div>
       <div className={`${navBar} lg4:translate-x-0 transition fixed pr-[75px] lg4:pr-0 max-w-[300px] lg4:max-w-[100%] w-full top-0 left-0 z-[9999] lg4:relative lg4:top-auto lg4:left-auto`}><SideNavbar/></div>
@@ -121,7 +122,7 @@ const Friends = () => {
       </div>
 
       
-      <div className={`friends-scroll sidebar-scroll relative rounded-xl px-4 py-4 bg-white w-full max-h-[600px] lg4:max-h-[calc(100vh-215px)] lg4:max-h-auto lg4:min-h-[calc(100vh-150px)] mt-5 flex items-center justify-center overflow-auto ${show === "Friends" ? "block" : "hidden"}`}>
+      <div className={`friends-scroll sidebar-scroll relative rounded-xl px-4 py-4 bg-white w-full max-h-[600px] min-h-[500px] lg4:max-h-[calc(100vh-215px)] lg4:max-h-auto lg4:min-h-[calc(100vh-150px)] mt-5 overflow-auto ${friends === false ? "flex items-center justify-center" : ""} ${show === "Friends" ? "block" : "hidden"}`}>
       
       {
         friends === false
