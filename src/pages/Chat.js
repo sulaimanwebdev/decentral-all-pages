@@ -159,7 +159,7 @@ const Chat = () => {
         
       <div className="bg-white rounded-xl px-4 py-4 sm2:py-2 flex items-center justify-between flex-col gap-2 sm2:flex-row">
           <div className='text-not-black font-bold text-[20px]'>Chat</div>
-          <div className="w-full sm2:w-[600px] flex items-center gap-2 bg-white border border-[#F5F5F7] rounded-xl px-3"><input type="text" placeholder='Search name/chat' className='w-full bg-white py-3 text-[#5F6374] text-[15px] border-none outline-none' /><svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#11047A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 16.5L15 15" stroke="#11047A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div className="w-full sm2:w-[600px] flex items-center gap-2 bg-white border border-[#F5F5F7] focus-within:border-main-color focus-within:bg-transparent-main-color rounded-xl px-3"><input type="text" placeholder='Search name/chat' className='w-full bg-transparent py-3 text-[#11047A] text-[15px] border-none outline-none' /><svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#11047A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 16.5L15 15" stroke="#11047A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </div>
 
          {
@@ -306,7 +306,7 @@ const Chat = () => {
                   </div>
 
 
-                  <div className="sticky bottom-0 left-0 w-full flex items-center h-fit bg-white flex gap-2 bg-white rounded-xl px-3"><input type="text" placeholder='Type your message here' className='w-full bg-white py-4 text-[#5F6374] text-[15px] border-none outline-none' /> <button><img src="/images/attach.svg" className='w-[30px]' alt="attach icon" /></button> <button className='ml-2'><img src="/images/send.svg" className='w-[25px]' alt="send icon" /></button> <div className="w-[calc(100%-20px)] absolute -bottom-[1px] left-1/2 -translate-x-1/2 bg-white h-[1px]"></div></div>
+                  <div className="sticky bottom-0 left-0 w-full flex items-center h-fit bg-white gap-2 rounded-xl px-3"><input type="text" placeholder='Type your message here' className='w-full bg-white py-4 text-[#5F6374] text-[15px] border-none outline-none' /> <button><img src="/images/attach.svg" className='w-[30px]' alt="attach icon" /></button> <button className='ml-2'><img src="/images/send.svg" className='w-[25px]' alt="send icon" /></button> <div className="w-[calc(100%-20px)] absolute -bottom-[1px] left-1/2 -translate-x-1/2 bg-white h-[1px]"></div></div>
 
 
              </div>

@@ -89,7 +89,7 @@ const Friends = () => {
   ]
   
   const [show, setshow] = React.useState('Friends');
-  const [showDropDown3, setshowDropDown3] = React.useState(false);
+  const [friends, setfriends] = React.useState(false);
 
   React.useEffect(() => {
     document.body.classList.add('dashboard');
@@ -117,13 +117,26 @@ const Friends = () => {
              <button onClick={()=> {setshow("Friends")}} className={`${show === "Friends" ? "sm2:px-6 py-2.5 rounded-xl text-[13px] sm5:text-[15px] bg-main-color text-white" : "sm2:px-6 py-2.5 rounded-xl text-[13px] sm5:text-[15px] bg-transparent-main-color text-not-black"}`}>Friends</button>
              <button onClick={()=> {setshow("Add New")}} className={`${show === "Add New" ? "sm2:px-6 py-2.5 rounded-xl text-[13px] sm5:text-[15px] bg-main-color text-white" : "sm2:px-6 py-2.5 rounded-xl text-[13px] sm5:text-[15px] bg-transparent-main-color text-not-black"}`}>Add New</button>
           </div>
-          <div className="w-full lg4:w-[400px] flex items-center gap-2 bg-white border border-[#F5F5F7] rounded-xl px-3"><input type="text" placeholder='Search Recent Friends' className='w-full bg-white py-3 text-[#5F6374] text-[15px] border-none outline-none' /><svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#11047A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 16.5L15 15" stroke="#11047A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div className="w-full lg4:w-[400px] flex items-center gap-2 bg-white border border-[#F5F5F7] focus-within:border-[#0085FF] focus-within:bg-transparent-main-color  rounded-xl px-3"><input type="text" placeholder='Search Recent Friends' className='w-full bg-transparent py-3 text-[#11047A] text-[15px] border-none outline-none' /><svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#11047A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 16.5L15 15" stroke="#11047A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </div>
 
       
-      <div className={`friends-scroll sidebar-scroll rounded-xl px-4 py-4 bg-white w-full max-h-[600px] lg4:max-h-[calc(100vh-215px)] lg4:max-h-auto lg4:min-h-[calc(100vh-150px)] mt-5 overflow-auto ${show === "Friends" ? "block" : "hidden"}`}>
+      <div className={`friends-scroll sidebar-scroll relative rounded-xl px-4 py-4 bg-white w-full max-h-[600px] lg4:max-h-[calc(100vh-215px)] lg4:max-h-auto lg4:min-h-[calc(100vh-150px)] mt-5 flex items-center justify-center overflow-auto ${show === "Friends" ? "block" : "hidden"}`}>
       
-      <div className="flex flex-col divide-y divide-[#F9F9F9]">
+      {
+        friends === false
+        ?
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-3 pb-6 w-full h-full text-center flex-1 flex items-center justify-center">
+                <div className='flex items-center justify-center flex-col'>
+                <img src="/images/emptyState.svg" alt="empty-state" />
+                  <div className="font-bold text-[#11047A] text-[19px]">Oops, You have no Friends Yet</div>
+                  <div className="mt-2 text-[#11047A] text-[15px]">Please search or select friends from suggestion to add Friends</div>
+                 <button onClick={()=> {setfriends(true)}} className='mt-7 px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-main-color text-white'>Add Friends Now</button>
+                </div>
+             </div>
+
+        :
+        <div className="flex flex-col divide-y divide-[#F9F9F9]">
       {
         data.map((ele)=>{
             return(
@@ -148,6 +161,7 @@ const Friends = () => {
         })
       }
       </div>
+      }
 
       </div>
 
