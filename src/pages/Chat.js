@@ -113,7 +113,8 @@ const Chat = () => {
 
   const [navBar, setnavBar] = React.useState('-translate-x-full');
   const [showChat, setshowChat] = React.useState('hidden');
-  const [showDropDown3, setshowDropDown3] = React.useState(false);
+  const [friends, setfriends] = React.useState(false);
+  const [friendsList, setfriendsList] = React.useState(false);
 
 
   React.useEffect(() => {
@@ -142,7 +143,26 @@ const Chat = () => {
           <div className="w-full sm2:w-[600px] flex items-center gap-2 bg-white border border-[#F5F5F7] rounded-xl px-3"><input type="text" placeholder='Search name/chat' className='w-full bg-white py-3 text-[#5F6374] text-[15px] border-none outline-none' /><svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#11047A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 16.5L15 15" stroke="#11047A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </div>
 
-         <div className="w-full max-h-[600px] lg2:max-h-auto lg2:min-h-[calc(100vh-150px)] mt-5 grid grid-cols-1 md2:grid-cols-2 relative overflow-hidden">
+         {
+            friends === false
+            ?
+            <div className="w-full flex flex-col max-h-[600px] lg2:max-h-auto lg2:min-h-[calc(100vh-150px)] mt-5 relative overflow-hidden bg-white rounded-xl">
+             <div className="px-4 py-3 flex items-center justify-between">
+                <button className='flex items-center gap-2 text-[18px] text-[#11047A] font-bold'>All Messages<svg width="16" height="11" className='translate-y-[3px]' viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.3411 0.759644L6.53103 6.69098L11.7209 0.759644" stroke="#0085FF" stroke-width="1.48283" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <button><svg width="22" height="9" viewBox="0 0 18 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.14086" cy="2.34095" r="1.72997" transform="rotate(-90 2.14086 2.34095)" fill="#888888"/><circle cx="9.06078" cy="2.34095" r="1.72997" transform="rotate(-90 9.06078 2.34095)" fill="#888888"/><circle cx="15.9807" cy="2.34095" r="1.72997" transform="rotate(-90 15.9807 2.34095)" fill="#888888"/></svg></button>
+             </div>
+
+             <div className="px-4 py-3 pb-6 w-full text-center flex-1 flex items-center justify-center">
+                <div className='flex items-center justify-center flex-col'>
+                <img src="/images/emptyState.svg" alt="empty-state" />
+                  <div className="font-bold text-[#11047A] text-[19px]">Not Chat Yet!</div>
+                  <div className="mt-2 text-[#11047A] text-[15px]">Please find to add the friends to do chat with them.</div>
+                 <button onClick={()=> {setfriends(true)}} className='mt-7 px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-main-color text-white'>Add Friends Now</button>
+                </div>
+             </div>
+            </div>
+            :
+            <div className="w-full max-h-[600px] lg2:max-h-auto lg2:min-h-[calc(100vh-150px)] mt-5 grid grid-cols-1 md2:grid-cols-2 relative overflow-hidden">
             <div className='sidebar-scroll h-full bg-white rounded-xl md2:rounded-none md2:rounded-tl-xl md2:rounded-bl-lg max-h-[600px] lg2:max-h-[calc(100vh-150px)] overflow-y-auto'>
              <div className="px-4 py-3 flex items-center justify-between">
                 <button className='flex items-center gap-2 text-[18px] text-[#11047A] font-bold'>All Messages<svg width="16" height="11" className='translate-y-[3px]' viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.3411 0.759644L6.53103 6.69098L11.7209 0.759644" stroke="#0085FF" stroke-width="1.48283" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -174,7 +194,7 @@ const Chat = () => {
             </div>
 
             <div className={`sidebar-scroll h-full bg-[#F9F9F9] border md2:border-none rounded-xl md2:rounded-none md2:rounded-tr-xl md2:rounded-br-lg max-h-[600px] lg2:max-h-[calc(100vh-150px)] overflow-y-auto absolute top-0 left-0 w-full md2:relative md2:top-auto md2:left-auto ${showChat} md2:block`}>
-             <div className="w-full flex items-center justify-between px-4 py-4 border-b border-[#EEEEEE]">
+             <div className="w-full flex sm:items-center sm:justify-between flex-col sm:flex-row flex-wrap gap-2 gap-y-4 px-4 py-4 border-b border-[#EEEEEE]">
              <div className="relative flex items-center gap-3 pl-10 md2:pl-0">
                 <img onClick={()=> {setshowChat('hidden')}} src="/images/arrow-left.svg" className='cursor-pointer w-[22px] absolute top-1/2 -translate-y-1/2 left-0 block md2:hidden' alt="arrow left" />
                         <button className="relative">
@@ -187,10 +207,16 @@ const Chat = () => {
                         </div>
             </div>
 
-              <div className="flex items-center gap-8">
+              {
+                friendsList === false
+                ?
+                <button onClick={()=> {setfriendsList(true)}} className='px-5 translate-x-[40px] sm:translate-x-0 rounded-md py-3 bg-main-color w-fit text-white text-sm'>Send Request</button>
+                :
+                <div className="flex items-center gap-8">
               <button><svg width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 16.5L15 15" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
               <button><svg width="5" height="18" viewBox="0 0 5 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.30224" cy="2.28381" r="1.72997" fill="#888888"/><circle cx="2.30224" cy="9.20373" r="1.72997" fill="#888888"/><circle cx="2.30224" cy="16.1236" r="1.72997" fill="#888888"/></svg></button>
               </div>
+              }
 
              </div>
 
@@ -268,6 +294,7 @@ const Chat = () => {
             </div>
 
          </div>
+         }
 
 
       </div>
