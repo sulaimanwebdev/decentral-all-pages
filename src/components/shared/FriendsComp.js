@@ -291,7 +291,7 @@ const Friends = () => {
 
 <div className={`relative flex flex-col divide-y divide-[#F9F9F9] h-full  `}>
 {
-  data.map((ele)=>{
+  data.slice(0,4).map((ele)=>{
     return(
         <div key={Math.random()} className="flex sm3:items-center justify-between flex-col sm3:flex-row gap-2 py-4 px-5 lg4:px-4">
 <div className="flex items-center gap-3">
