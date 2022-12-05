@@ -1,55 +1,50 @@
 import React from 'react'
 import SideNavbar from '../components/shared/SideNavbar'
 import {Link} from 'react-router-dom'
+import SwipeToDelete from 'react-swipe-to-delete-component';
+// Import styles of the react-swipe-to-delete-component
+import 'react-swipe-to-delete-component/dist/swipe-to-delete.css';
 
 const Chat = () => {
 
     let data = [
         {
+            id: 1,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
         },
 
         {
+            id: 1123,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
         },
 
         {
+            id: 123412,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: true
         },
 
         {
+            id: 112314,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
         },
 
         {
+            id: 1983498532,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
         },
 
         {
-            name: "Ricko Ferdinand Malik",
-            lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
-            selected: false
-        },
-
-
-        {
-            name: "Ricko Ferdinand Malik",
-            lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
-            selected: false
-        },
-
-
-        {
+            id: 1459945,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
@@ -57,22 +52,23 @@ const Chat = () => {
 
 
         {
+            id: 123123921,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
         },
 
 
-
         {
+            id: 3453451,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
         },
 
 
-
         {
+            id: 567651,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
@@ -81,6 +77,7 @@ const Chat = () => {
 
 
         {
+            id: 23411,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
@@ -89,6 +86,7 @@ const Chat = () => {
 
 
         {
+            id: 101238123,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
@@ -97,6 +95,25 @@ const Chat = () => {
 
 
         {
+            id: 100103123123,
+            name: "Ricko Ferdinand Malik",
+            lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
+            selected: false
+        },
+
+
+
+        {
+            id: 1886493490,
+            name: "Ricko Ferdinand Malik",
+            lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
+            selected: false
+        },
+
+
+
+        {
+            id: 1129402348908,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
@@ -104,6 +121,7 @@ const Chat = () => {
 
 
         {
+            id: 190128409128490,
             name: "Ricko Ferdinand Malik",
             lastMessage: "Kita keliling kota bogor aja yuu, sambil makan di cafe",
             selected: false
@@ -122,6 +140,7 @@ const Chat = () => {
   }, [])
 
   
+
   return (
     <>
     <div className="mainCont grid grid-cols-1 lg2:grid-cols-[300px,1fr] lg2:pr-4 overflow-y-hidden ">
@@ -146,7 +165,7 @@ const Chat = () => {
          {
             friends === false
             ?
-            <div className="w-full flex flex-col max-h-[600px] lg2:max-h-auto lg2:min-h-[calc(100vh-150px)] mt-5 relative overflow-hidden bg-white rounded-xl">
+            <div className="w-full flex flex-col min-h-[calc(100vh-200px)] lg2:min-h-[calc(100vh-150px)] mt-5 relative overflow-hidden bg-white rounded-xl">
              <div className="px-4 py-3 flex items-center justify-between">
                 <button className='flex items-center gap-2 text-[18px] text-[#11047A] font-bold'>All Messages<svg width="16" height="11" className='translate-y-[3px]' viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.3411 0.759644L6.53103 6.69098L11.7209 0.759644" stroke="#0085FF" stroke-width="1.48283" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 <button><svg width="22" height="9" viewBox="0 0 18 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.14086" cy="2.34095" r="1.72997" transform="rotate(-90 2.14086 2.34095)" fill="#888888"/><circle cx="9.06078" cy="2.34095" r="1.72997" transform="rotate(-90 9.06078 2.34095)" fill="#888888"/><circle cx="15.9807" cy="2.34095" r="1.72997" transform="rotate(-90 15.9807 2.34095)" fill="#888888"/></svg></button>
@@ -160,6 +179,8 @@ const Chat = () => {
                  <button onClick={()=> {setfriends(true)}} className='mt-7 px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-main-color text-white'>Add Friends Now</button>
                 </div>
              </div>
+
+            
             </div>
             :
             <div className="w-full max-h-[600px] lg2:max-h-auto lg2:min-h-[calc(100vh-150px)] mt-5 grid grid-cols-1 md2:grid-cols-2 relative overflow-hidden">
@@ -170,10 +191,11 @@ const Chat = () => {
              </div>
 
              <div className="mt-4 flex flex-col">
-                {
-                    data.map((ele)=>{
-                        return(
-                            <button onClick={()=> {setshowChat('block')}} className={`w-full px-4 py-4 flex items-center gap-3 justify-between ${ele.selected ? "md2:bg-[#F9F9F9]" : "bg-white"}`}>
+             {
+          data.map(ele => (
+            <SwipeToDelete key={ele.id}>
+              <a className="list-group-item bg-white block">
+              <button onClick={()=> {setshowChat('block')}} className={`w-full px-4 py-4 flex items-center gap-3 justify-between ${ele.selected ? "md2:bg-[#F9F9F9]" : "bg-white"}`}>
                     <div className="flex items-center gap-3">
                         <img src="/images/profile.png" className='w-[60px]' alt="profile" />
                         <div className='text-left flex flex-col gap-2'>
@@ -187,14 +209,16 @@ const Chat = () => {
                     <button className='rounded-full flex items-center justify-center w-[25px] h-[25px] bg-main-color text-white text-[14px]'>1</button>
                     </div>
                 </button>
-                        )
-                    })
-                }
+              </a>
+            </SwipeToDelete>
+          ))
+        }
+             
              </div>
             </div>
 
-            <div className={`sidebar-scroll h-full bg-[#F9F9F9] border md2:border-none rounded-xl md2:rounded-none md2:rounded-tr-xl md2:rounded-br-lg max-h-[600px] lg2:max-h-[calc(100vh-150px)] overflow-y-auto absolute top-0 left-0 w-full md2:relative md2:top-auto md2:left-auto ${showChat} md2:block`}>
-             <div className="w-full flex sm:items-center sm:justify-between flex-col sm:flex-row flex-wrap gap-2 gap-y-4 px-4 py-4 border-b border-[#EEEEEE]">
+            <div className={`sidebar-scroll h-full bg-[#F9F9F9] border md2:border-none rounded-xl md2:rounded-none md2:rounded-tr-xl md2:rounded-br-lg max-h-[600px] lg2:max-h-[calc(100vh-150px)] z-[99] overflow-y-auto absolute top-0 left-0 w-full md2:relative md2:top-auto md2:left-auto ${showChat} md2:block`}>
+             <div className={`w-full flex sm:items-center sm:justify-between flex-col sm:flex-row flex-wrap gap-2 gap-y-4 px-4 py-4 border-b border-[#EEEEEE]`}>
              <div className="relative flex items-center gap-3 pl-10 md2:pl-0">
                 <img onClick={()=> {setshowChat('hidden')}} src="/images/arrow-left.svg" className='cursor-pointer w-[22px] absolute top-1/2 -translate-y-1/2 left-0 block md2:hidden' alt="arrow left" />
                         <button className="relative">
@@ -212,7 +236,7 @@ const Chat = () => {
                 ?
                 <button onClick={()=> {setfriendsList(true)}} className='px-5 translate-x-[40px] sm:translate-x-0 rounded-md py-3 bg-main-color w-fit text-white text-sm'>Send Request</button>
                 :
-                <div className="flex items-center gap-8">
+                <div className="flex items-center gap-8 translate-x-[40px] sm:translate-x-0">
               <button><svg width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 16.5L15 15" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
               <button><svg width="5" height="18" viewBox="0 0 5 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.30224" cy="2.28381" r="1.72997" fill="#888888"/><circle cx="2.30224" cy="9.20373" r="1.72997" fill="#888888"/><circle cx="2.30224" cy="16.1236" r="1.72997" fill="#888888"/></svg></button>
               </div>

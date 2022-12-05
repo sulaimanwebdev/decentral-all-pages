@@ -252,6 +252,7 @@ const Settings = () => {
           </div>
 
         </div>
+
           </div>
           :
           show === "Password" 
