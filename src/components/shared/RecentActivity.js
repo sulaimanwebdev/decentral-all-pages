@@ -317,11 +317,12 @@ const RecentActivity = () => {
     ]
 
     const [overflow, setoverflow] = useState('overflow-y-hidden');
+    const [activityData, setactivityData] = useState(false);
     
   return (
     <>
        <div className="sidebar-scroll h-full relative bg-white pt-[20px] lg2:pt-[36px] overflow-y-auto lg2:max-h-screen">
-        <div className='h-[calc(100%-100px)]'>
+        <div className='h-[calc(100%-100px)] flex flex-col'>
 
            <div className="px-5 lg4:px-4">
            <button className="custom-shadow bg-white w-full p-3 rounded-3xl">
@@ -330,7 +331,7 @@ const RecentActivity = () => {
            </div>
 
 
-             <div className='mt-10 '>
+             <div className='mt-10 flex-1'>
 
                 <div className="px-5 lg2:px-4 flex items-center justify-between border-b pb-3 border-[#F9F9F9]">
                     <div className='text-[17px] text-[#11047A] font-bold'>Recent Activity</div>
@@ -338,35 +339,41 @@ const RecentActivity = () => {
                 </div>
 
 
-                <div className={`relative flex flex-col divide-y divide-[#F9F9F9] h-full ${overflow} ${overflow === "overflow-y-hidden" ? "max-h-[82vh]" : ""} `}>
+                <div className={`relative flex flex-col divide-y divide-[#F9F9F9] h-full ${overflow} ${activityData === false ? "items-center justify-center" : ""} ${overflow === "overflow-y-hidden" ? "max-h-[82vh]" : ""} `}>
                     {
-                        data.map((ele)=>{
-                            return(
-                                <div className='flex items-center justify-between py-4 px-5 lg2:px-4'>
-                          <div className="flex items-center gap-3">
-                            {
-                                ele.type === "buy"
-                                ?
-                                <div className="w-[50px] h-[50px] rounded-full bg-main-color flex items-center justify-center"><svg width="17" height="19" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.72571 1.25L7.72571 16.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.70131 7.2998L7.72531 1.2498L13.7503 7.2998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                                :
-                                <div className="w-[50px] h-[50px] rounded-full bg-[#FF5C00] flex items-center justify-center"><svg width="17" height="19" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.27429 15.75V0.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.2987 9.7002L7.27469 15.7502L1.24969 9.7002" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                            }
-                            <div>
-                                <div className='text-[#11047A] text-[15px] font-bold'>{ele.title}</div>
-                                <div className='text-sm text-not-black font-light mt-[3px]'>{ele.date}</div>
-                            </div>
-                          </div>
-
-                          <div className='text-right'>
-                                <div className='text-[#11047A] text-[15px] font-bold'>{ele.topValue}</div>
-                                <div className='text-sm text-not-black font-light mt-[3px]'>{ele.bottomValue}</div>
-                          </div>
-                    </div>
-                            )
-                        })
+                        activityData === false
+                        ?
+                        <div className='w-full flex items-center justify-center text-[#11047A]'>No Recent Activity Found!</div>
+                        :
+                        
+                            data.map((ele)=>{
+                                return(
+                                    <div className='flex items-center justify-between py-4 px-5 lg2:px-4'>
+                              <div className="flex items-center gap-3">
+                                {
+                                    ele.type === "buy"
+                                    ?
+                                    <div className="w-[50px] h-[50px] rounded-full bg-main-color flex items-center justify-center"><svg width="17" height="19" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.72571 1.25L7.72571 16.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.70131 7.2998L7.72531 1.2498L13.7503 7.2998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                                    :
+                                    <div className="w-[50px] h-[50px] rounded-full bg-[#FF5C00] flex items-center justify-center"><svg width="17" height="19" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.27429 15.75V0.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.2987 9.7002L7.27469 15.7502L1.24969 9.7002" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                                }
+                                <div>
+                                    <div className='text-[#11047A] text-[15px] font-bold'>{ele.title}</div>
+                                    <div className='text-sm text-not-black font-light mt-[3px]'>{ele.date}</div>
+                                </div>
+                              </div>
+    
+                              <div className='text-right'>
+                                    <div className='text-[#11047A] text-[15px] font-bold'>{ele.topValue}</div>
+                                    <div className='text-sm text-not-black font-light mt-[3px]'>{ele.bottomValue}</div>
+                              </div>
+                        </div>
+                                )
+                            })
+                        
                     }
 
-             <button onClick={()=> {setoverflow('overflow-y-auto')}} className={`gradientWhiteBG min-h-[120px] pb-2 sticky bottom-0 left-0 w-full items-end justify-center text-main-color ${overflow === "overflow-y-hidden" ? "flex" : "hidden"}`}>See All</button>
+             <button onClick={()=> {setoverflow('overflow-y-auto')}} className={`gradientWhiteBG min-h-[120px] pb-2 sticky bottom-0 left-0 w-full items-end justify-center text-main-color ${activityData === true ? "" : "hidden"} ${overflow === "overflow-y-hidden" ? "flex" : "hidden"}`}>See All</button>
                     
 
                 </div>

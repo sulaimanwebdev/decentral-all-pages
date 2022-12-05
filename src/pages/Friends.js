@@ -131,7 +131,7 @@ const Friends = () => {
                 <img src="/images/emptyState.svg" alt="empty-state" />
                   <div className="font-bold text-[#11047A] text-[19px]">Oops, You have no Friends Yet</div>
                   <div className="mt-2 text-[#11047A] text-[15px]">Please search or select friends from suggestion to add Friends</div>
-                 <button onClick={()=> {setfriends(true)}} className='mt-7 px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-main-color text-white'>Add Friends Now</button>
+                 <button onClick={()=> {setfriends(true)}} className='mt-7 px-5 py-3 sm:px-7 text-[15px] sm:py-4 rounded-xl bg-main-color text-white'>Add Friends Now</button>
                 </div>
              </div>
 

@@ -176,7 +176,7 @@ const Chat = () => {
                 <img src="/images/emptyState.svg" alt="empty-state" />
                   <div className="font-bold text-[#11047A] text-[19px]">Not Chat Yet!</div>
                   <div className="mt-2 text-[#11047A] text-[15px]">Please find to add the friends to do chat with them.</div>
-                 <button onClick={()=> {setfriends(true)}} className='mt-7 px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-main-color text-white'>Add Friends Now</button>
+                 <button onClick={()=> {setfriends(true)}} className='mt-7 px-5 py-3 sm:px-7 sm:py-4 text-[15px]  rounded-xl bg-main-color text-white'>Add Friends Now</button>
                 </div>
              </div>
 

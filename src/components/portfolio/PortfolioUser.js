@@ -87,6 +87,7 @@ const PortfolioUser = () => {
   ]
 
   const [show, setshow] = React.useState('Tokens');
+  const [data, setdata] = React.useState(false);
 
   return (
     <>
@@ -100,7 +101,20 @@ const PortfolioUser = () => {
               </div>
         <div className="bg-white rounded-xl p-5 relative">
 
-          <div className="w-full relative">
+         
+
+          
+          {
+            data === false
+            ?
+            <div className='flex items-center justify-center flex-col text-center w-full h-[300px]'>
+                <img src="/images/emptyState.svg" alt="empty-state" />
+                  <div className="font-bold text-[#11047A] text-[19px]">Oops, Your Portfolio is Empty!</div>
+            </div>
+            :
+            <div>
+
+         <div className="w-full relative">
                <div className="flex items-center justify-between gap-5">
                  <div className="w-[400px] flex items-center flex-row-reverse gap-2 bg-transparent-main-color rounded-xl px-3"><input type="text" placeholder='Search portfolio assets...' className='w-full bg-transparent h-[50px] text-[#5F6374] text-[15px] border-none outline-none' /><svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.3514 2.30396C4.57687 2.30396 2.32767 4.55315 2.32767 7.32768C2.32767 10.1022 4.57687 12.3514 7.3514 12.3514C10.1259 12.3514 12.3751 10.1022 12.3751 7.32768C12.3751 4.55315 10.1259 2.30396 7.3514 2.30396Z" fill="#0085FF"/><path opacity="0.7" fill-rule="evenodd" clip-rule="evenodd" d="M11.2418 11.2181C11.4053 11.0546 11.6704 11.0546 11.8339 11.2181L12.9503 12.3345C13.1137 12.498 13.1137 12.763 12.9503 12.9265C12.7868 13.09 12.5217 13.09 12.3582 12.9265L11.2418 11.8101C11.0783 11.6466 11.0783 11.3816 11.2418 11.2181Z" fill="#0085FF"/></svg></div>
                  <button className='px-4 h-[50px] rounded-xl bg-transparent-main-color'><svg width="20" height="8" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0ZM14 0C12.9 0 12 0.9 12 2C12 3.1 12.9 4 14 4C15.1 4 16 3.1 16 2C16 0.9 15.1 0 14 0ZM8 0C6.9 0 6 0.9 6 2C6 3.1 6.9 4 8 4C9.1 4 10 3.1 10 2C10 0.9 9.1 0 8 0Z" fill="#0085FF"/></svg></button>
@@ -108,8 +122,7 @@ const PortfolioUser = () => {
 
           </div>
 
-          
-          {
+            {
             show === "Tokens"
             ?
             <div className="sidebar-scroll overflow-auto mt-5 max-h-[400px]">
@@ -292,6 +305,8 @@ const PortfolioUser = () => {
 
 
               </div>
+            </div>
+          }
             </div>
           }
 
