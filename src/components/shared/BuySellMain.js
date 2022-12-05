@@ -153,11 +153,28 @@ const BuySellMain = () => {
   
                <div className="mt-5">
   
-               <div className="flex items-center justify-between border border-[#F2F2F2] focus-within:border-main-color focus-within:bg-transparent-main-color rounded-lg p-2 pr-3">
-                    <div>
-                        <div className='flex items-center gap-2 flex-row-reverse'><div className='flex gap-1.5'><span className='text-[#11047A] font-bold'>USD</span></div><img src="/images/usd.svg" alt="icon" /></div>
+               <div className="focus-within:border-main-color relative flex items-center justify-between border border-[#F2F2F2] rounded-lg ">
+                    <div className='mr-[10px] flex items-center w-full justify-between pr-2'>
+                        <div onMouseEnter={()=> {setshowDropDownCoin(true)}} onMouseLeave={()=> {setshowDropDownCoin(false)}} className='p-2 pr-0 w-fit flex items-center gap-2 flex-row-reverse'><div className='flex gap-1.5'><span className='text-[#11047A] font-bold'>{coin === "BTC" ? "Bitcoin" : coin === "ETH" ? "Ethereum" : coin === "SOL" ? "Solana" : ""}</span>  </div><div className="flex items-center gap-2 border-r border-[#F2F2F2] pr-2 cursor-pointer"><img src="/images/btc.svg" alt="icon" /> <svg className={`${showDropDownCoin === false ? "" : "rotate-180"}`} width="9" height="8" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.86603 4.5C3.48113 5.16667 2.51888 5.16667 2.13397 4.5L0.401923 1.5C0.0170231 0.833332 0.498149 -3.85264e-07 1.26795 -4.52563e-07L4.73205 -7.55404e-07C5.50185 -8.22702e-07 5.98298 0.833332 5.59808 1.5L3.86603 4.5Z" fill={showDropDownCoin === false ? "#1A1A1A" : "#0085FF"}/></svg></div></div>
+                        <input type="text" className='text-[#11047A] text-right font-extralight text-opacity-50 w-[calc(100%-130px)] outline-0 border-0 ring-0' placeholder={coin} />
                     </div>
-                    <input type="text" className='text-[#11047A] text-right w-[calc(100%-140px)] outline-0 border-0 ring-0' placeholder="USD" />
+                    <div onMouseEnter={()=> {setshowDropDownCoin(true)}} onMouseLeave={()=> {setshowDropDownCoin(false)}} className={`bg-white z-[99] border w-fit absolute top-full left-0 px-2 py-2 border-[#F2F2F2] rounded-2xl ${showDropDownCoin === false ? "hidden" : "flex"}`}>
+             <div>
+            
+             <div className="">
+                <div className="sidebar-scroll max-h-[200px] overflow-y-auto flex flex-col w-fit items-center gap-2">
+                <label htmlFor="bitcoin1" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin1" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin2" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin2" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin3" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin3" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin4" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin4" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin5" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin5" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin6" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin6" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin7" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin7" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+
+                </div>
+             </div>
+             </div>
+           </div>
                 </div>
   
   
@@ -216,11 +233,28 @@ const BuySellMain = () => {
                   </div>
   
   
-                  <div className="focus-within:border-main-color mt-3 flex items-center justify-between border border-[#F2F2F2] rounded-lg p-2 pr-3">
-                    <div>
-                        <div className='flex items-center gap-2 flex-row-reverse'><div className='flex gap-1.5'><span className='text-[#11047A] font-bold'>USD</span></div><img src="/images/usd.svg" alt="icon" /></div>
+                  <div className="mt-3 focus-within:border-main-color relative flex items-center justify-between border border-[#F2F2F2] rounded-lg ">
+                    <div className='mr-[10px] flex items-center w-full justify-between pr-2'>
+                        <div onMouseEnter={()=> {setshowDropDownCoin(true)}} onMouseLeave={()=> {setshowDropDownCoin(false)}} className='p-2 pr-0 w-fit flex items-center gap-2 flex-row-reverse'><div className='flex gap-1.5'><span className='text-[#11047A] font-bold'>{coin === "BTC" ? "Bitcoin" : coin === "ETH" ? "Ethereum" : coin === "SOL" ? "Solana" : ""}</span>  </div><div className="flex items-center gap-2 border-r border-[#F2F2F2] pr-2 cursor-pointer"><img src="/images/btc.svg" alt="icon" /> <svg className={`${showDropDownCoin === false ? "" : "rotate-180"}`} width="9" height="8" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.86603 4.5C3.48113 5.16667 2.51888 5.16667 2.13397 4.5L0.401923 1.5C0.0170231 0.833332 0.498149 -3.85264e-07 1.26795 -4.52563e-07L4.73205 -7.55404e-07C5.50185 -8.22702e-07 5.98298 0.833332 5.59808 1.5L3.86603 4.5Z" fill={showDropDownCoin === false ? "#1A1A1A" : "#0085FF"}/></svg></div></div>
+                        <input type="text" className='text-[#11047A] text-right font-extralight text-opacity-50 w-[calc(100%-130px)] outline-0 border-0 ring-0' placeholder={coin} />
                     </div>
-                    <input type="text" className='text-[#11047A] text-right w-[calc(100%-140px)] outline-0 border-0 ring-0' placeholder="USD" />
+                    <div onMouseEnter={()=> {setshowDropDownCoin(true)}} onMouseLeave={()=> {setshowDropDownCoin(false)}} className={`bg-white z-[99] border w-fit absolute top-full left-0 px-2 py-2 border-[#F2F2F2] rounded-2xl ${showDropDownCoin === false ? "hidden" : "flex"}`}>
+             <div>
+            
+             <div className="">
+                <div className="sidebar-scroll max-h-[200px] overflow-y-auto flex flex-col w-fit items-center gap-2">
+                <label htmlFor="bitcoin1" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin1" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin2" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin2" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin3" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin3" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin4" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin4" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin5" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin5" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin6" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin6" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+                <label htmlFor="bitcoin7" className='flex items-center gap-5 cursor-pointer'><div className="flex items-center gap-2 text-[#11047A] font-bold text-[15px]"><img src="/images/btc.svg" alt="icon" /> Bitcoin</div><input type="radio" id="bitcoin7" name="select-coin" className='cursor-pointer w-[15px] h-[15px]' /></label>
+
+                </div>
+             </div>
+             </div>
+           </div>
                 </div>
 
                 
