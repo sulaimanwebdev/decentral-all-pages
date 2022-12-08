@@ -89,7 +89,7 @@ const BuySell = () => {
           </div>
           </div>
 
-          <div className="flex items-center justify-between flex-col sm11:flex-row gap-3 bg-white rounded-xl px-4 h-[80px] mt-2 sm8:mt-6">
+          <div className="flex items-center justify-between flex-col sm11:flex-row gap-3 bg-white rounded-xl px-4 py-4 xl:py-0 xl:h-[80px]  mb-5 sm8:mb-0 mt-6">
 
             <div className="flex items-center gap-3">
               <img src="/images/btc.svg" className='w-[55px]' alt="icon" />
@@ -99,7 +99,7 @@ const BuySell = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center gap-10 flex-wrap">
+            <div className="flex items-center justify-center gap-5 xl:gap-10 flex-wrap lg2:flex-nowrap xl:flex-wrap">
               <div className='flex gap-1'><span className={`text-[14px] font-bold ${portfolioStatus === "dump" ? "text-[#FF3A29]" : "text-main-color"}`}>-$6,963</span> <span className='text-[14px] text-[#A3AED0]'>since last month</span></div>
             
                 <div className={`rounded-lg flex items-center justify-center w-[50px] h-[50px] ${portfolioStatus === "up" ? "bg-transparent-main-color" : "bg-[#FF5C00] bg-opacity-[0.15]"}`}>{portfolioStatus === "up" ? <img src="/images/arrow-up.svg" className='select-none w-[13px]' alt="arrow-up" /> : <img src="/images/arrow-down.svg" className='select-none w-[13px]' alt="arrow-down" />}</div>
@@ -109,6 +109,7 @@ const BuySell = () => {
          
 
             <BuySellMain/>
+            
 
             <div className="mb-5 mt-2 sm8:mt-6 bg-white rounded-xl p-5 pb-2 relative">
              <div className='flex items-center justify-between mb-8'>
