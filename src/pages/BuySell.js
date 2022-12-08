@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 import SideNavbar from '../components/shared/SideNavbar'
-import PortfolioUser from '../components/portfolio/PortfolioUser'
+import Chart from '../components/portfolio/Chart'
 import {Link} from 'react-router-dom'
 import RecentActivity from '../components/shared/RecentActivity'
 import BuySellMain from '../components/shared/BuySellMain'
@@ -16,6 +16,7 @@ const BuySell = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isOpen2, setIsOpen2] = React.useState(false);
   const [newaddress, setnewaddress] = React.useState(false);
+  const [portfolioStatus, setportfolioStatus] = React.useState('up');
 
   function closeModal() {
     setIsOpen(false);
@@ -88,20 +89,20 @@ const BuySell = () => {
           </div>
           </div>
 
-          <div className="flex items-center justify-between flex-col sm11:flex-row gap-3 bg-white rounded-xl px-4 py-4 mt-2 sm8:mt-6">
+          <div className="flex items-center justify-between flex-col sm11:flex-row gap-3 bg-white rounded-xl px-4 h-[80px] mt-2 sm8:mt-6">
 
             <div className="flex items-center gap-3">
-              <img src="/images/btc.svg" className='w-[60px]' alt="icon" />
+              <img src="/images/btc.svg" className='w-[55px]' alt="icon" />
               <div>
                 <div className="text-[14px] text-[#5F6374]">Exchange rate</div>
                 <div className="text-[19px] font-bold text-not-black mt-1">16.436.60 USD</div>
               </div>
             </div>
 
-            <div className="flex items-center justify-center gap-6 flex-wrap">
-              <div className='flex gap-1'><span className='text-[14px] font-bold text-[#FF3A29]'>-$6,963</span> <span className='text-[14px] text-[#A3AED0]'>since last month</span></div>
+            <div className="flex items-center justify-center gap-10 flex-wrap">
+              <div className='flex gap-1'><span className={`text-[14px] font-bold ${portfolioStatus === "dump" ? "text-[#FF3A29]" : "text-main-color"}`}>-$6,963</span> <span className='text-[14px] text-[#A3AED0]'>since last month</span></div>
             
-              <svg width="165" height="56" viewBox="0 0 165 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 31.6881C9.41936 31.6606 9.45023 4.16727 14.2986 2.14841C19.147 0.129547 33.9733 19.3446 38.8958 21.1292C43.8184 22.9138 44.8087 50.8431 51.2999 53.3601C57.791 55.8771 70.3156 30.24 76.3507 30.24C82.3858 30.24 82.2711 20.4731 88.6493 21.1292C95.0275 21.7853 94.1001 2.14841 100.948 2.14841C107.796 2.14841 109.462 32.035 115.483 30.24C121.503 28.4449 119.916 46.6731 126.104 53.0169C132.292 59.3607 145.52 33.0283 150.511 30.411C155.503 27.7937 158.088 53.0169 163 53.0169" stroke="#FF3A29" stroke-width="3" stroke-linecap="round"/></svg>
+                <div className={`rounded-lg flex items-center justify-center w-[50px] h-[50px] ${portfolioStatus === "up" ? "bg-transparent-main-color" : "bg-[#FF5C00] bg-opacity-[0.15]"}`}>{portfolioStatus === "up" ? <img src="/images/arrow-up.svg" className='select-none w-[13px]' alt="arrow-up" /> : <img src="/images/arrow-down.svg" className='select-none w-[13px]' alt="arrow-down" />}</div>
             </div>
 
           </div>
@@ -109,7 +110,13 @@ const BuySell = () => {
 
             <BuySellMain/>
 
-            <PortfolioUser/>
+            <div className="mb-5 mt-2 sm8:mt-6 bg-white rounded-xl p-5 pb-2 relative">
+             <div className='flex items-center justify-between mb-8'>
+                <div className='text-[18px] text-not-black font-bold mb-[20px] sm9:mb-0'>Portfolio Status</div>
+             </div>
+
+             <Chart/>
+          </div>
 
 
       </div>
