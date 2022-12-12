@@ -93,7 +93,7 @@ const Friends = () => {
   const [relavent, setrelavent] = React.useState('');
 
   React.useEffect(() => {
-    document.body.classList.add('dashboard');
+    document.body.classList.add('dashboard', 'friends');
   }, [])
   
   return (

@@ -59,6 +59,21 @@ body {
   }
 }
 
+
+
+
+
+
+@media (max-width: 1249px){
+  /* html{
+    overflow-y: auto !important;
+  } */
+
+  .friends {
+    overflow-y: auto !important;
+  }
+}
+
 .custom-shadow{
   box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12);
 }
