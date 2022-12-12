@@ -17,6 +17,37 @@ const Settings = () => {
   const [resetChanges, setresetChanges] = React.useState(false);
   const [newaddress, setnewaddress] = React.useState(false);
   const [deletePaymentMethod, setdeletePaymentMethod] = React.useState(false);
+  
+  const [profileI1, setprofileI1] = React.useState("");
+  const [profileI2, setprofileI2] = React.useState("");
+  const [profileI3, setprofileI3] = React.useState("");
+  const [profileI4, setprofileI4] = React.useState("");
+  const [profileI5, setprofileI5] = React.useState("");
+  const [profileI6, setprofileI6] = React.useState("");
+  const [profileI7, setprofileI7] = React.useState("");
+  const [profileI8, setprofileI8] = React.useState("");
+
+
+  const [profileFirstName, setprofileFirstName] = React.useState("");
+  const [profileLastName, setprofileLastName] = React.useState("");
+  const [country, setcountry] = React.useState("");
+  const [state, setstate] = React.useState("");
+  const [city, setcity] = React.useState("");
+  const [zip, setzip] = React.useState("");
+  const [number, setnumber] = React.useState("");
+
+
+
+
+
+  const [password1, setpassword1] = React.useState("");
+  const [password2, setpassword2] = React.useState("");
+  const [password3, setpassword3] = React.useState("");
+
+
+  const [oldPassword, setoldPassword] = React.useState("");
+  const [newPassword, setnewPassword] = React.useState("");
+  const [ConfirmPassword, setConfirmPassword] = React.useState("");
 
   function closeModal() {
     setIsOpen(false)
@@ -31,7 +62,7 @@ const Settings = () => {
   }
 
   function saveChangesModalOpen() {
-    setsaveChanges(true)
+    setsaveChanges(true);
   }
 
   function resetChangesModalOpen() {
@@ -93,12 +124,15 @@ const Settings = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-3 mt-8">
           <div className="text-[#11047A]">
             <div className=" font-bold text-[15px] mb-2">First Name</div>
-            <input type="text" className='w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color' placeholder='Enter First Name...' />
+            <input type="text" onChange={(e)=> {setprofileFirstName(e.target.value)}} value={profileFirstName} className={`w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${profileI1 === "error" ? "border-red-400" : ""}`} placeholder='Enter First Name...' />
+            <div className={`text-red-400 text-sm mt-2 ${profileI1 === "error" ? "flex" : "hidden"}`}>First Name Required</div>
           </div>
 
           <div className="text-[#11047A]">
             <div className=" font-bold text-[15px] mb-2">Last Name</div>
-            <input type="text" className='w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color' placeholder='Enter Last Name...' />
+            <input type="text" onChange={(e)=> {setprofileLastName(e.target.value)}} value={profileLastName} className={`w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${profileI2 === "error" ? "border-red-400" : ""}`} placeholder='Enter Last Name...' />
+            <div className={`text-red-400 text-sm mt-2 ${profileI2 === "error" ? "flex" : "hidden"}`}>Last Name Required</div>
+          
           </div>
 
           </div>
@@ -188,13 +222,15 @@ const Settings = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-3 mt-8">
           <div className="text-[#11047A]">
             <div className=" font-bold text-[15px] mb-2">Country</div>
-            <input type="text" className='w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color' placeholder='Enter Country name...' />
+            <input type="text" onChange={(e)=> {setcountry(e.target.value)}} value={country} className={`w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${profileI3 === "error" ? "border-red-400" : ""}`} placeholder='Enter Country name...' />
+            <div className={`text-red-400 text-sm mt-2 ${profileI3 === "error" ? "flex" : "hidden"}`}>Country Required</div>
           </div>
 
 
           <div className="text-[#11047A]">
             <div className=" font-bold text-[15px] mb-2">State</div>
-            <input type="text" className='w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color' placeholder='Enter State name...' />
+            <input type="text" onChange={(e)=> {setstate(e.target.value)}} value={state} className={`w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${profileI4 === "error" ? "border-red-400" : ""}`} placeholder='Enter State name...' />
+            <div className={`text-red-400 text-sm mt-2 ${profileI4 === "error" ? "flex" : "hidden"}`}>State Required</div>
           </div>
 
           </div>
@@ -205,13 +241,15 @@ const Settings = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-3 mt-8">
           <div className="text-[#11047A]">
             <div className=" font-bold text-[15px] mb-2">City</div>
-            <input type="text" className='w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color' placeholder='Enter City...' />
+            <input type="text" onChange={(e)=> {setcity(e.target.value)}} value={city} className={`w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${profileI5 === "error" ? "border-red-400" : ""}`} placeholder='Enter City name...' />
+            <div className={`text-red-400 text-sm mt-2 ${profileI5 === "error" ? "flex" : "hidden"}`}>City Required</div>
           </div>
 
 
           <div className="text-[#11047A]">
-            <div className=" font-bold text-[15px] mb-2">ZIP Code</div>
-            <input type="text" className='w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color' placeholder='Enter ZIP Code...' />
+            <div className=" font-bold text-[15px] mb-2">ZIP</div>
+            <input type="text" onChange={(e)=> {setzip(e.target.value)}} value={zip} className={`w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${profileI6 === "error" ? "border-red-400" : ""}`} placeholder='Enter ZIP name...' />
+            <div className={`text-red-400 text-sm mt-2 ${profileI6 === "error" ? "flex" : "hidden"}`}>ZIP Required</div>
           </div>
 
           </div>
@@ -221,7 +259,7 @@ const Settings = () => {
 
           <div className="mt-8 text-[#11047A]">
             <div className=" font-bold text-[15px] mb-2">Birthday</div>
-            <label htmlFor='date' className='relative cursor-pointer w-full flex items-center justify-between px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color'>
+            <label htmlFor='date' className={`relative cursor-pointer w-full flex items-center justify-between px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${profileI8 === "error" ? "border-red-400" : ""}`}>
                <div>{dateValue === "MM DD YYY" ? <div className='text-[#9CA3AF]'>{dateValue}</div> : new Date(dateValue).toDateString().split(' ').slice(1).join(' ')}</div>
                <img src='/images/calender.svg' className='w-[20px]' alt='calender' />
                <input
@@ -233,13 +271,16 @@ const Settings = () => {
           }}
         />
             </label>
+            <div className={`text-red-400 text-sm mt-2 ${profileI8 === "error" ? "flex" : "hidden"}`}>Date Required</div>
+
           </div>
 
 
 
-          <div className="mt-8 text-[#11047A]">
+          <div className="text-[#11047A] mt-8">
             <div className=" font-bold text-[15px] mb-2">Phone Number</div>
-            <input type="text" className='w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color' placeholder='Enter Phone Number...' />
+            <input type="text" onChange={(e)=> {setnumber(e.target.value)}} value={number} className={`w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${profileI7 === "error" ? "border-red-400" : ""}`} placeholder='Enter phone number...' />
+            <div className={`text-red-400 text-sm mt-2 ${profileI7 === "error" ? "flex" : "hidden"}`}>Phone number Required</div>
           </div>
 
 
@@ -264,21 +305,26 @@ const Settings = () => {
 
           
 
-          <div className="text-[#11047A]">
+         <div className="text-[#11047A]">
             <div className=" font-bold text-[15px] mb-2">Old Password</div>
-            <input type="text" className='w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color' placeholder='Old Password...' />
+            <input type="text" onChange={(e)=> {setoldPassword(e.target.value)}} value={oldPassword} className={`w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${password1 === "error" ? "border-red-400" : ""}`} placeholder='Enter Old Password...' />
+            <div className={`text-red-400 text-sm mt-2 ${password1 === "error" ? "flex" : "hidden"}`}>Old Password Required</div>
           </div>
 
 
           <div className="mt-8 text-[#11047A]">
             <div className=" font-bold text-[15px] mb-2">New Password</div>
-            <input type="text" className='w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color' placeholder='New Password...' />
+            <input type="text" onChange={(e)=> {setnewPassword(e.target.value)}} value={newPassword} className={`w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${password2 === "error" ? "border-red-400" : ""}`} placeholder='Enter New Password...' />
+            <div className={`text-red-400 text-sm mt-2 ${password2 === "error" ? "flex" : "hidden"}`}>New Password Required</div>
           </div>
 
+
           <div className="mt-8 text-[#11047A]">
-            <div className=" font-bold text-[15px] mb-2">Confirm New-Password</div>
-            <input type="text" className='w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color' placeholder='Confirm New-Password...' />
+            <div className=" font-bold text-[15px] mb-2">Confirm Password</div>
+            <input type="text" onChange={(e)=> {setConfirmPassword(e.target.value)}} value={ConfirmPassword} className={`w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${password3 === "error" ? "border-red-400" : ""}`} placeholder='Enter Confirm Password...' />
+            <div className={`text-red-400 text-sm mt-2 ${password3 === "error" ? "flex" : "hidden"}`}>Confirm Password Required</div>
           </div>
+
 
           <div className="mt-6 grid grid-cols-1 sm:flex items-center gap-3">
           <button onClick={saveChangesModalOpen} className='px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-main-color text-white'>Update Password</button>
