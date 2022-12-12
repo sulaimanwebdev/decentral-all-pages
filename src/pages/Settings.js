@@ -218,8 +218,6 @@ const Settings = () => {
 
 
 
-        
-
 
           <div className="mt-8 text-[#11047A]">
             <div className=" font-bold text-[15px] mb-2">Birthday</div>
