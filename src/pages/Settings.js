@@ -61,8 +61,83 @@ const Settings = () => {
     setIsOpen(true)
   }
 
-  function saveChangesModalOpen() {
-    setsaveChanges(true);
+  function saveChangesModalOpenProfile() {
+    if(profileFirstName === ""){
+      setprofileI1("error");
+    }
+
+    if(profileLastName === ""){
+      setprofileI2("error");
+    }
+
+    if(country === ""){
+      setprofileI3("error");
+    }
+
+    if(state === ""){
+      setprofileI4("error");
+    }
+
+
+    if(city === ""){
+      setprofileI5("error");
+    }
+
+
+    if(zip === ""){
+      setprofileI6("error");
+    }
+
+    if(number === ""){
+      setprofileI7("error");
+    }
+
+    // if(dateValue === "MM DD YYY"){
+    //   profileI8("error");
+    // }
+
+    else{
+      setprofileI1("");
+      setprofileI2("");
+      setprofileI3("");
+      setprofileI4("");
+      setprofileI5("");
+      setprofileI6("");
+      setprofileI7("");
+      setprofileI8("");
+      setsaveChanges(true);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  function saveChangesModalOpenPassword() {
+    if(oldPassword === ""){
+      setpassword1("error");
+    }
+
+    if(newPassword === ""){
+      setpassword2("error");
+    }
+
+    if(ConfirmPassword === ""){
+      setpassword3("error");
+    }
+
+
+    else{
+      setpassword1("");
+      setpassword2("");
+      setpassword3("");
+      setsaveChanges(true);
+    }
   }
 
   function resetChangesModalOpen() {
@@ -285,7 +360,7 @@ const Settings = () => {
 
 
           <div className="mt-6 grid grid-cols-1 sm:flex items-center gap-3">
-          <button onClick={saveChangesModalOpen} className='px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-main-color text-white'>Save Change</button>
+          <button onClick={saveChangesModalOpenProfile} className='px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-main-color text-white'>Save Change</button>
           <button onClick={resetChangesModalOpen} className='px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-[#FFE7D9] text-[#FF5C00]'>Reset Changes</button>
           </div>
 
@@ -327,7 +402,7 @@ const Settings = () => {
 
 
           <div className="mt-6 grid grid-cols-1 sm:flex items-center gap-3">
-          <button onClick={saveChangesModalOpen} className='px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-main-color text-white'>Update Password</button>
+          <button onClick={saveChangesModalOpenPassword} className='px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-main-color text-white'>Update Password</button>
           <button onClick={resetChangesModalOpen} className='px-5 py-3 sm:px-7 sm:py-4 rounded-xl bg-[#FFE7D9] text-[#FF5C00]'>Reset Changes</button>
           </div>
 
