@@ -247,9 +247,10 @@ const Chat = () => {
 
 
 
-             <div className="sidebar-scroll relative px-5 pt-4 w-full max-h-[calc(100%-102px)] overflow-y-auto">
+             <div className="sidebar-scroll relative px-5 pt-4 w-full max-h-[calc(100%-102px)] min-h-[calc(100%-102px)] overflow-y-auto">
 
 
+                     <div className='min-h-[50vh]'>
                      <div className="w-full flex justify-end">
                      <div className="p-2 relative rounded-lg rounded-tr-none bg-main-color w-fit">
                         <img src="/images/image.svg" className='w-full' alt="image" />
@@ -281,7 +282,7 @@ const Chat = () => {
                   </div>
 
                   <div className="w-full flex justify-start mt-7">
-                  <div className="relative text-[#666666] px-4 py-4 rounded-lg rounded-tl-none bg-[#F2F2F2] text-white w-fit">
+                  <div className="relative text-[#666666] px-4 py-4 rounded-lg rounded-tl-none bg-[#F2F2F2] w-fit">
                   Hmm, gimana kalo besok kita jalan berdua ?
                   <div className="flex items-center justify-start text-[15px] text-[#888888] gap-2 mt-3">10:56 AM</div>
                   <svg width="18" height="17" className='absolute top-0 -left-[11px]' viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.45268 0.429688H17.9966V16.2466L1.52636 3.07042C0.431822 2.19479 1.05099 0.429688 2.45268 0.429688Z" fill="#F2F2F2"/></svg>
@@ -290,7 +291,7 @@ const Chat = () => {
 
 
                   <div className="w-full flex justify-start mt-7">
-                  <div className="relative text-[#666666] px-4 py-4 rounded-lg rounded-tl-none bg-[#F2F2F2] text-white w-fit">
+                  <div className="relative text-[#666666] px-4 py-4 rounded-lg rounded-tl-none bg-[#F2F2F2] w-fit">
                   Hmm, gimana kalo besok kita jalan berdua ?
                   <div className="flex items-center justify-start text-[15px] text-[#888888] gap-2 mt-3">10:56 AM</div>
                   <svg width="18" height="17" className='absolute top-0 -left-[11px]' viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.45268 0.429688H17.9966V16.2466L1.52636 3.07042C0.431822 2.19479 1.05099 0.429688 2.45268 0.429688Z" fill="#F2F2F2"/></svg>
@@ -305,10 +306,10 @@ const Chat = () => {
                   <svg width="16" height="17" className='absolute top-0 -right-[11px]' viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6055 0.239502H0.611816V16.0564L12.5758 5.42174C15.0287 3.2414 16.2551 2.15123 15.8917 1.19537C15.5283 0.239502 13.8874 0.239502 10.6055 0.239502Z" fill="#0085FF"/></svg>
                   </div>
                   </div>
+                     </div>
 
 
                   <div className="sticky bottom-0 left-0 w-full flex items-center h-fit bg-white gap-2 rounded-xl px-3"><input type="text" placeholder='Type your message here' className='w-full bg-white py-4 text-[#5F6374] text-[15px] border-none outline-none' /> <button><img src="/images/attach.svg" className='w-[30px]' alt="attach icon" /></button> <button className='ml-2'><img src="/images/send.svg" className='w-[25px]' alt="send icon" /></button> <div className="w-[calc(100%-20px)] absolute -bottom-[1px] left-1/2 -translate-x-1/2 bg-white h-[1px]"></div></div>
-
 
              </div>
 
