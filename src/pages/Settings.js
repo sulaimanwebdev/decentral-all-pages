@@ -203,6 +203,7 @@ const Settings = () => {
             <div className={`text-red-400 text-sm mt-2 ${profileI1 === "error" ? "flex" : "hidden"}`}>First Name Required</div>
           </div>
 
+
           <div className="text-[#11047A]">
             <div className=" font-bold text-[15px] mb-2">Last Name</div>
             <input type="text" onChange={(e)=> {setprofileLastName(e.target.value)}} value={profileLastName} className={`w-full px-4 py-3 rounded-lg border border-[#F5F5F7] outline-main-color focus:bg-transparent-main-color ${profileI2 === "error" ? "border-red-400" : ""}`} placeholder='Enter Last Name...' />
