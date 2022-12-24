@@ -156,7 +156,7 @@ const Chat = () => {
       <div onClick={()=> setnavBar('-translate-x-full')} className={`${navBar === "-translate-x-full" ? "opacity-0 invisible" : "opacity-100 visible"} transition lg2:hidden fixed top-0 z-[999] left-0 w-screen h-screen bg-[#11047A33] bg-opacity-20 pr-4`}></div>
       <div className="pt-5 bg-white overflow-hidden">
 
-      <div className="sidebar-scroll bg-transparent-main-color p-5 rounded-lg lg2:rounded-tl-lg lg2:rounded-tr-lg h-full lg2:max-h-screen overflow-y-auto">
+      <div className="sidebar-scroll bg-transparent-main-color p-5 rounded-lg lg2:rounded-tl-lg lg2:rounded-tr-lg h-full lg2:max-h-screen min-h-[calc(100vh-80px)] lg2:min-h-auto overflow-y-auto">
         
       <div className="bg-white rounded-xl px-4 py-4 sm2:py-2 flex items-center justify-between flex-col gap-2 sm2:flex-row">
           <div className='text-not-black font-bold text-[20px]'>Chat</div>
@@ -184,8 +184,8 @@ const Chat = () => {
             
             </div>
             :
-            <div className="w-full max-h-[600px] lg2:max-h-auto lg2:min-h-[calc(100vh-150px)] mt-5 grid grid-cols-1 md2:grid-cols-2 relative overflow-hidden">
-            <div className='sidebar-scroll h-full bg-white rounded-xl md2:rounded-none md2:rounded-tl-xl md2:rounded-bl-lg max-h-[600px] lg2:max-h-[calc(100vh-150px)] overflow-y-auto'>
+            <div className="w-full min-h-[calc(100vh-150px)] mt-5 grid grid-cols-1 md2:grid-cols-2 relative overflow-hidden">
+            <div className='sidebar-scroll h-full bg-white rounded-xl md2:rounded-none md2:rounded-tl-xl md2:rounded-bl-lg max-h-[calc(100vh-150px)] overflow-y-auto'>
              <div className="px-4 py-3 flex items-center justify-between">
                 <button className='flex items-center gap-2 text-[18px] text-[#11047A] font-bold'>All Messages<svg width="16" height="11" className='translate-y-[3px]' viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.3411 0.759644L6.53103 6.69098L11.7209 0.759644" stroke="#0085FF" stroke-width="1.48283" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 <button><svg width="22" height="9" viewBox="0 0 18 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.14086" cy="2.34095" r="1.72997" transform="rotate(-90 2.14086 2.34095)" fill="#888888"/><circle cx="9.06078" cy="2.34095" r="1.72997" transform="rotate(-90 9.06078 2.34095)" fill="#888888"/><circle cx="15.9807" cy="2.34095" r="1.72997" transform="rotate(-90 15.9807 2.34095)" fill="#888888"/></svg></button>
@@ -218,7 +218,7 @@ const Chat = () => {
              </div>
             </div>
 
-            <div className={`sidebar-scroll h-full bg-[#F9F9F9] border md2:border-none rounded-xl md2:rounded-none md2:rounded-tr-xl md2:rounded-br-lg max-h-[600px] lg2:max-h-[calc(100vh-150px)] z-[99] overflow-y-auto absolute top-0 left-0 w-full md2:relative md2:top-auto md2:left-auto ${showChat} md2:block`}>
+            <div className={`sidebar-scroll h-full bg-[#F9F9F9] border md2:border-none rounded-xl md2:rounded-none md2:rounded-tr-xl md2:rounded-br-lg max-h-[calc(100vh-150px)] z-[99] overflow-y-auto absolute top-0 left-0 w-full md2:relative md2:top-auto md2:left-auto ${showChat} md2:block`}>
              <div className={`w-full flex sm:items-center sm:justify-between flex-col sm:flex-row flex-wrap gap-2 gap-y-4 px-4 py-4 border-b border-[#EEEEEE]`}>
              <div className="relative flex items-center gap-3 pl-10 md2:pl-0">
                 <img onClick={()=> {setshowChat('hidden')}} src="/images/arrow-left.svg" className='cursor-pointer w-[22px] absolute top-1/2 -translate-y-1/2 left-0 block md2:hidden' alt="arrow left" />
@@ -250,7 +250,7 @@ const Chat = () => {
              <div className="sidebar-scroll relative px-5 pt-4 w-full max-h-[calc(100%-102px)] min-h-[calc(100%-102px)] overflow-y-auto">
 
 
-                     <div className='min-h-[50vh]'>
+                     <div className='min-h-[calc(100vh-330px)]'>
                      <div className="w-full flex justify-end">
                      <div className="p-2 relative rounded-lg rounded-tr-none bg-main-color w-fit">
                         <img src="/images/image.svg" className='w-full' alt="image" />
